@@ -367,6 +367,13 @@ Enhancements
   `https_started` indicating whether the listener is started for the
   respective port.
 
+* Revamped the logger configuration mechanism completely. This includes.
+  1. Make WBEMConnection.conn_id variable a new property connection_id.
+  2. Modify logging config to add new optional parameter to WBEMConnection
+     constructor (enable_logging) which determines if logging will be executed
+     for request APIs/responses and XML requests/responses. If not None
+     this automatically initiates the LogOperationRecorder.
+
 Bug fixes
 ^^^^^^^^^
 
